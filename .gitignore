@@ -1,0 +1,56 @@
+# Genel olarak gereksiz dosyalar
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.env
+*.local
+
+# Build dosyaları
+bin/
+obj/
+out/
+
+# Visual Studio kullanıcı ayarları
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE/Editor dosyaları
+.vscode/
+.idea/
+
+# NuGet paketleri
+*.nupkg
+*.snupkg
+packages/
+
+# Yaygın bağımlılıklar
+node_modules/
+bower_components/
+
+# Docker dosyaları
+docker-compose.override.yml
+.env.docker.local
+
+# Çeşitli sistem dosyaları
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Publish işlemleri
+publish/
+app.publish/
+
+# Temporary dosyalar
+*.tmp
+*.temp
+*.backup
+
+# Logs
+*.log
+logs/

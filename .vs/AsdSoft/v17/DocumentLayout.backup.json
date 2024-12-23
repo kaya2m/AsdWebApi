@@ -67,8 +67,7 @@
               "RelativeToolTip": "Domain\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:17:20.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:17:20.69Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Domain\\Entities\\Global\\Modul\\Menuler.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAqwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:34:48.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:34:48.908Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Domain\\Entities\\Global\\Modul\\Moduller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:34:48.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:34:48.606Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Gorevler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:24:54.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:24:54.698Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Birimler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:24:54.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:24:54.524Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Gruplar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:24:54.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:24:54.177Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Kullanicilar.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAwwB4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:16:52.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:16:52.021Z"
             }
           ]
         }
