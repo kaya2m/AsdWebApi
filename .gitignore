@@ -60,3 +60,8 @@ Persistence/bin/Debug
 Core/bin/Debug
 Core/obj/Debug
 Persistence/obj/Debug
+AsdWebApi/obj/Debug
+Domain/obj/Debug
+AsdWebApi/obj
+AsdWebApi/bin/Debug
+Repository/obj

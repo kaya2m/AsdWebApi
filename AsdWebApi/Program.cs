@@ -1,6 +1,9 @@
 
+using Application.Services;
 using AsdWebApi.Configuration;
+using Domain.Token;
 using Microsoft.AspNetCore.Authentication.Negotiate;
+using Repository.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +13,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
    .AddNegotiate();
 
+builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOptions"));
+builder.Services.AddScoped<ITokenService, TokenService>();
 //SPECIAL CONFIGURES
 builder.Services.ConfigureDatabase(builder.Configuration);
 builder.Services.ConfigureSwaggerSetting();
+//builder.Services.ConfigureAuthentication();
 builder.Host.ConfigureDependency();
 
 
@@ -31,6 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

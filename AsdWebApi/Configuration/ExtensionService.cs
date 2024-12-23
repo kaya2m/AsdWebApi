@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Any;
@@ -31,6 +32,24 @@ public static class ExtensionService
         host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
     }
 
+    public static void ConfigureAuthentication(this IServiceCollection services)
+    {
+        services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+             .AddCookie(option =>
+             {
+                 option.Cookie.SameSite = SameSiteMode.Lax;
+                 option.Cookie.Name = ".ASD.Auth";
+                 option.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+                 option.Cookie.HttpOnly = false;
+                 option.ExpireTimeSpan = TimeSpan.FromDays(1);
+                 option.Cookie.MaxAge = option.ExpireTimeSpan;
+                 option.SlidingExpiration = false;
+                 option.LoginPath = "/Hesap/Giris";
+                 option.LogoutPath = "/Hesap/Cikis";
+                 option.AccessDeniedPath = "/Hata/404";
+                 option.ReturnUrlParameter = "ReturnUrl";
+             });
+    }
     public static void ConfigureSwaggerSetting(this IServiceCollection services)
     {
         services.AddSwaggerGen(s =>
