@@ -26,9 +26,5 @@ namespace Domain.Entities.Global.Modul
         [JsonIgnore]
         [IgnoreDataMember]
         public virtual Moduller Moduller { get; set; }
-
-        [JsonIgnore]
-        [IgnoreDataMember]
-        public virtual OnYuz_Yetkiler Yetkiler { get; set; }
     }
 }

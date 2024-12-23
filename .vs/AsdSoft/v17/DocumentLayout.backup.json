@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\asdSoft\\AsdWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\yetki\\onyuz_yetkiler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\global\\yetki\\onyuz_yetkiler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D699606-44DA-421C-A97A-4375ED69F502}|AsdWebApi\\AsdWebApi.csproj|c:\\asdsoft\\asdwebapi\\asdwebapi\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D699606-44DA-421C-A97A-4375ED69F502}|AsdWebApi\\AsdWebApi.csproj|solutionrelative:asdwebapi\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\kullanici\\birimler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\global\\kullanici\\birimler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D699606-44DA-421C-A97A-4375ED69F502}|AsdWebApi\\AsdWebApi.csproj|c:\\asdsoft\\asdwebapi\\asdwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0D699606-44DA-421C-A97A-4375ED69F502}|AsdWebApi\\AsdWebApi.csproj|solutionrelative:asdwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\kullanici\\gorevler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\global\\kullanici\\gorevler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{602F80C6-3BAF-4A08-8172-E178EDD17C2E}|Repository\\Repository.csproj|c:\\asdsoft\\asdwebapi\\repository\\repositories\\reposervicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{602F80C6-3BAF-4A08-8172-E178EDD17C2E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\reposervicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\kullanici\\gruplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\global\\kullanici\\gruplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{602F80C6-3BAF-4A08-8172-E178EDD17C2E}|Repository\\Repository.csproj|c:\\asdsoft\\asdwebapi\\repository\\service\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{602F80C6-3BAF-4A08-8172-E178EDD17C2E}|Repository\\Repository.csproj|solutionrelative:repository\\service\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\modul\\menuler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\global\\modul\\menuler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\modul\\moduller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\global\\modul\\moduller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|solutionrelative:domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{602F80C6-3BAF-4A08-8172-E178EDD17C2E}|Repository\\Repository.csproj|c:\\asdsoft\\asdwebapi\\repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{602F80C6-3BAF-4A08-8172-E178EDD17C2E}|Repository\\Repository.csproj|solutionrelative:repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BF2A207-022B-428B-A668-07E4DB3DB7F3}|Domain\\Domain.csproj|c:\\asdsoft\\asdwebapi\\domain\\entities\\global\\kullanici\\kullanicilar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,104 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OnYuz_Yetkiler.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Yetki\\OnYuz_Yetkiler.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Yetki\\OnYuz_Yetkiler.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Yetki\\OnYuz_Yetkiler.cs",
-              "RelativeToolTip": "Domain\\Entities\\Global\\Yetki\\OnYuz_Yetkiler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:43:41.853Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\AsdWebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "AsdWebApi\\appsettings.json",
+              "ToolTip": "C:\\asdSoft\\AsdWebApi\\AsdWebApi\\appsettings.json",
+              "RelativeToolTip": "AsdWebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-23T10:18:26.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\BaseEntity.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\BaseEntity.cs",
-              "RelativeToolTip": "Domain\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "GenericService.cs",
+              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Repository\\Service\\GenericService.cs",
+              "RelativeDocumentMoniker": "Repository\\Service\\GenericService.cs",
+              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Repository\\Service\\GenericService.cs",
+              "RelativeToolTip": "Repository\\Service\\GenericService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:17:20.69Z"
+              "WhenOpened": "2024-12-23T10:08:06.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Menuler.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Modul\\Menuler.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Modul\\Menuler.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Modul\\Menuler.cs",
-              "RelativeToolTip": "Domain\\Entities\\Global\\Modul\\Menuler.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAqwCIAAAAAAAAAAAAAAA==",
+              "Title": "UnitOfwork.cs",
+              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Repository\\UnitOfwork\\UnitOfwork.cs",
+              "RelativeDocumentMoniker": "Repository\\UnitOfwork\\UnitOfwork.cs",
+              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Repository\\UnitOfwork\\UnitOfwork.cs",
+              "RelativeToolTip": "Repository\\UnitOfwork\\UnitOfwork.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:34:48.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Moduller.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Modul\\Moduller.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Modul\\Moduller.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Modul\\Moduller.cs",
-              "RelativeToolTip": "Domain\\Entities\\Global\\Modul\\Moduller.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:34:48.606Z"
+              "WhenOpened": "2024-12-23T10:08:00.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Gorevler.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Gorevler.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Kullanici\\Gorevler.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Gorevler.cs",
-              "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Gorevler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "RepoServiceModule.cs",
+              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Repository\\Repositories\\RepoServiceModule.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\RepoServiceModule.cs",
+              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Repository\\Repositories\\RepoServiceModule.cs",
+              "RelativeToolTip": "Repository\\Repositories\\RepoServiceModule.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwDMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:24:54.698Z"
+              "WhenOpened": "2024-12-23T10:05:26.427Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Birimler.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Birimler.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Kullanici\\Birimler.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Birimler.cs",
-              "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Birimler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "KullaniciController.cs",
+              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\AsdWebApi\\Controllers\\KullaniciController.cs",
+              "RelativeDocumentMoniker": "AsdWebApi\\Controllers\\KullaniciController.cs",
+              "ToolTip": "C:\\asdSoft\\AsdWebApi\\AsdWebApi\\Controllers\\KullaniciController.cs",
+              "RelativeToolTip": "AsdWebApi\\Controllers\\KullaniciController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:24:54.524Z"
+              "WhenOpened": "2024-12-23T09:53:01.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Gruplar.cs",
-              "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Gruplar.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Kullanici\\Gruplar.cs",
-              "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Gruplar.cs",
-              "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Gruplar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:24:54.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Kullanicilar.cs",
               "DocumentMoniker": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Kullanicilar.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Global\\Kullanici\\Kullanicilar.cs",
               "ToolTip": "C:\\asdSoft\\AsdWebApi\\Domain\\Entities\\Global\\Kullanici\\Kullanicilar.cs",
               "RelativeToolTip": "Domain\\Entities\\Global\\Kullanici\\Kullanicilar.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwB4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwB8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:16:52.021Z"
+              "WhenOpened": "2024-12-23T09:51:27.372Z",
+              "EditorCaption": ""
             }
           ]
         }

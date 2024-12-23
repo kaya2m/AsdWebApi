@@ -103,3 +103,12 @@ C:\asdSoft\AsdWebApi\AsdWebApi\obj\Debug\net8.0\AsdWebApi.pdb
 C:\asdSoft\AsdWebApi\AsdWebApi\obj\Debug\net8.0\AsdWebApi.genruntimeconfig.cache
 C:\asdSoft\AsdWebApi\AsdWebApi\obj\Debug\net8.0\ref\AsdWebApi.dll
 C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Domain.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Domain.pdb
+C:\asdSoft\AsdWebApi\AsdWebApi\obj\Debug\net8.0\AsdWebApi.sourcelink.json
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\asdSoft\AsdWebApi\AsdWebApi\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll

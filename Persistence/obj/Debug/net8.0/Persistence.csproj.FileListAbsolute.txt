@@ -10,3 +10,9 @@ C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\Persistence.dll
 C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\refint\Persistence.dll
 C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\Persistence.pdb
 C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\ref\Persistence.dll
+C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\Persistence.sourcelink.json
+C:\asdSoft\AsdWebApi\Persistence\bin\Debug\net8.0\Persistence.runtimeconfig.json
+C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache
+C:\asdSoft\AsdWebApi\Persistence\bin\Debug\net8.0\Domain.dll
+C:\asdSoft\AsdWebApi\Persistence\bin\Debug\net8.0\Domain.pdb
+C:\asdSoft\AsdWebApi\Persistence\obj\Debug\net8.0\Persiste.61C28332.Up2Date

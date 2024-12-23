@@ -1,9 +1,39 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "AsdWebApi",
-    "version": "1.0"
+    "description": "<h1>ASD SOFT WEB API</h1>\r\n<p>proDuck ERP API, bir ASD Laminat A.Ş ürünüdür...</p>",
+    "version": "1.0.1",
+    "ASD SOFT": {
+      "altText": "proDuck Logo"
+    }
   },
-  "paths": { },
-  "components": { }
+  "paths": {
+    "/api/Kullanici/GetAll": {
+      "get": {
+        "tags": [
+          "Kullanici"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme.",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

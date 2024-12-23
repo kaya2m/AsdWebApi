@@ -2,6 +2,7 @@
 using Application.Services;
 using Application.UnitOfWork;
 using Autofac;
+using Microsoft.EntityFrameworkCore;
 using Persistence.DB;
 using Repository.Service;
 using Repository.UnitOfwork;
@@ -20,26 +21,35 @@ namespace Repository.Repositories
             //builder.RegisterType<AuthenticationService>().As<IAuthenticationService>()
             //    .InstancePerRequest();
 
+            // Register DbContext with the appropriate lifetime
+            builder.RegisterType<AsdDbContext>()
+                .As<DbContext>()
+                .InstancePerLifetimeScope();
+
+            // Register UnitOfWork
+            builder.RegisterType<UnitOfwork.UnitOfwork>().As<IUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            // Register GenericRepository and GenericService
             builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IGenericRepository<>))
                 .InstancePerLifetimeScope();
 
             builder.RegisterGeneric(typeof(GenericService<>)).As(typeof(IGenericService<>))
                 .InstancePerLifetimeScope();
 
-
-            builder.RegisterType<UnitOfwork.UnitOfwork>().As<IUnitOfWork>()
-                .InstancePerLifetimeScope();
-
+            // Register repository and service assemblies
             var apiAssembly = Assembly.GetExecutingAssembly();
-            var repoAssembly = Assembly.GetAssembly(typeof(AsdDbContext ));
+            var repoAssembly = Assembly.GetAssembly(typeof(AsdDbContext));
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly)
                 .Where(x => x.Name.EndsWith("Repository"))
-                .AsImplementedInterfaces().InstancePerLifetimeScope();
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly)
                 .Where(x => x.Name.EndsWith("Service"))
-                .AsImplementedInterfaces().InstancePerLifetimeScope();
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
         }
     }
 }

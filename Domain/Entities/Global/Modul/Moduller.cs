@@ -16,10 +16,7 @@ namespace Domain.Entities.Global.Modul
         public string ModulIkon { get; set; }
         public string Acıklama { get; set; }
         public string  ModulURL { get; set; }
-
         
         public virtual List<Menuler> Menuler { get; set; }
-        [JsonIgnore]
-        public virtual OnYuz_Yetkiler Yetkiler { get; set; }
     }
 }

@@ -1,0 +1,12 @@
+C:\asdSoft\AsdWebApi\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\asdSoft\AsdWebApi\Domain\bin\Debug\net8.0\Domain.dll
+C:\asdSoft\AsdWebApi\Domain\bin\Debug\net8.0\Domain.pdb
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.dll
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\Domain.pdb
+C:\asdSoft\AsdWebApi\Domain\obj\Debug\net8.0\ref\Domain.dll

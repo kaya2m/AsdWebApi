@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "AsdWebApi.Controllers.KullaniciController",
+    "Method": "GetAllUser",
+    "RelativePath": "api/Kullanici/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

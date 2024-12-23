@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Entities.Global.Kullanici;
+using Domain.Entities.Global.Modul;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.DB
@@ -17,7 +20,12 @@ namespace Persistence.DB
         protected AsdDbContext()
         {
         }
-
+        public DbSet<Kullanicilar> Kullanicilar { get; set; }
+        public DbSet<Gruplar> Gruplar { get; set; }
+        public DbSet<Birimler> Birimler { get; set; }
+        public DbSet<Gorevler> Gorevler { get; set; }
+        public DbSet<Moduller> Moduller { get; set; }
+        public DbSet<Menuler> Menuler { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
