@@ -5,10 +5,11 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Application.DTOs.Common;
+using Domain;
 
 namespace Application.Services
 {
-    public interface IGenericService<T> where T : class
+    public interface IGenericService<T> where T : BaseEntity
     {
         Task<ResponseDto<IEnumerable<T>>> SqlRawAsync(string sql);
         Task<ResponseDto<IEnumerable<T>>> GetAllAsync();

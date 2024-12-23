@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.Common;
 using Application.Repositories;
 using Application.Services;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Service
 {
-    public class GenericService<T> : IGenericService<T> where T : class
+    public class GenericService<T> : IGenericService<T> where T : BaseEntity
     {
         private readonly IGenericRepository<T> _genericRepository;
 
@@ -152,15 +153,42 @@ namespace Repository.Service
 
         public ResponseDto<EmptyDto> SoftRemove(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var data = _genericRepository.GetByIdAsync(id);
+                data.Result.isActive = false;
+                _genericRepository.Update(data.Result);
+
+                return ResponseDto<EmptyDto>.Success("Seçili Kayıt başarıyla silindi");
+
+            }
+            catch (Exception ex)
+            {
+
+                return ResponseDto<EmptyDto>.Fail(new ErrorDto(ex.Message, true), "İşlem gerçekleştirilirken sistemsel bir hata meydana geldi.", 500);
+            }
         }
 
         public ResponseDto<EmptyDto> SoftRemoveRange(IEnumerable<int> ids)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var datas = _genericRepository.Where(x => ids.Contains(x.Id));
+                foreach (var data in datas)
+                {
+                    data.isActive = false;
+                }
+                _genericRepository.UpdateRange(datas);
+                return ResponseDto<EmptyDto>.Success("Seçili Kayıtlar başarıyla silindi");
+            }
+            catch (Exception ex)
+            {
+
+                return ResponseDto<EmptyDto>.Fail(new ErrorDto(ex.Message, true), "İşlem gerçekleştirilirken sistemsel bir hata meydana geldi.", 500);
+            }
         }
 
-      
+
 
         public ResponseDto<EmptyDto> Update(T entity)
         {
