@@ -1,6 +1,36 @@
 [
   {
     "ContainingType": "AsdWebApi.Controllers.KullaniciController",
+    "Method": "CreateBirim",
+    "RelativePath": "api/Kullanici/BirimEkle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AsdWebApi.Controllers.KullaniciController",
+    "Method": "Birimler",
+    "RelativePath": "api/Kullanici/Birimler",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AsdWebApi.Controllers.KullaniciController",
+    "Method": "DeleteBirim",
+    "RelativePath": "api/Kullanici/BirimSil",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AsdWebApi.Controllers.KullaniciController",
     "Method": "GetAllUser",
     "RelativePath": "api/Kullanici/GetAll",
     "HttpMethod": "GET",

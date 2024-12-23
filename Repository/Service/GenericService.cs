@@ -155,9 +155,8 @@ namespace Repository.Service
         {
             try
             {
-                var data = _genericRepository.GetByIdAsync(id);
-                data.Result.isActive = false;
-                _genericRepository.Update(data.Result);
+                
+                _genericRepository.SoftRemove(id);
 
                 return ResponseDto<EmptyDto>.Success("Seçili Kayıt başarıyla silindi");
 
@@ -174,11 +173,7 @@ namespace Repository.Service
             try
             {
                 var datas = _genericRepository.Where(x => ids.Contains(x.Id));
-                foreach (var data in datas)
-                {
-                    data.isActive = false;
-                }
-                _genericRepository.UpdateRange(datas);
+                _genericRepository.SoftRemoveRange(datas);
                 return ResponseDto<EmptyDto>.Success("Seçili Kayıtlar başarıyla silindi");
             }
             catch (Exception ex)

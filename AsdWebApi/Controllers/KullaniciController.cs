@@ -24,5 +24,55 @@ namespace AsdWebApi.Controllers
             var data = await _kullanicilar.GetAllAsync();
             return Json(data);
         }
+        [HttpGet("Birimler")]
+        public async Task<JsonResult> Birimler()
+        {
+            var data =await _birimler.GetAllAsync();
+            return Json(data);
+
+        }
+
+        [HttpPost("BirimEkle")]
+        public async Task<JsonResult> CreateBirim()
+        {
+            var birim = new Birimler()
+            {
+                Adi = "Birim",
+                Acıklama="Birim Açıklama",
+            };
+           var ekle =  await _birimler.AddAsync(birim);
+            if (ekle.IsSuccessful)
+            {
+
+                return Json(ResponseDto<EmptyDto>.Success("Başarıyla eklendi"));
+            }
+            else
+            {
+                return Json(ResponseDto<EmptyDto>.Fail("eklenirken bir hata meydana geldi"));
+            }
+        }
+
+        [HttpDelete("BirimSil")]
+        public async Task<JsonResult> DeleteBirim()
+        {
+            var birim =await _birimler.GetByIdAsync(1);
+            if (birim is not null)
+            {
+               var islem = _birimler.SoftRemove(1);
+                if (islem.IsSuccessful)
+                {
+                    return Json(ResponseDto<EmptyDto>.Success("Başaırlı soft delete"));
+                }
+                else
+                {
+                    return Json(ResponseDto<EmptyDto>.Fail("başarısız"));
+                }
+            }
+            else
+            {
+                return Json(ResponseDto<EmptyDto>.Fail("Birim bulunamadı"));
+            }
+           
+        }
     }
 }

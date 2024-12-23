@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Repositories;
 using Application.UnitOfWork;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         private readonly DbSet<T> _dbSet;
         private readonly IUnitOfWork _unitOfWork;
@@ -29,12 +30,14 @@ namespace Repository.Repositories
         }
         public async Task AddAsync(T entity)
         {
+            _context.Entry(entity).State = EntityState.Added;
             await _dbSet.AddAsync(entity);
             await _unitOfWork.CommitAsync();
         }
 
         public async Task AddRangeAsync(IEnumerable<T> entities)
         {
+            _context.Entry(entities).State = EntityState.Added;
             await _dbSet.AddRangeAsync(entities);
             await _unitOfWork.CommitAsync();
         }
@@ -85,21 +88,33 @@ namespace Repository.Repositories
             _unitOfWork.Commit();
         }
 
-        //public void SoftRemove(int id)
-        //{
-        //    var entity = _dbSet.Find(id);
-        //    if (entity != null)
-        //    {
-        //        entity.IsDeleted = true;
+        public void SoftRemove(int id)
+        {
+            var entity = _dbSet.Find(id);
 
-        //        _unitOfWork.Commit();
-        //    }
-        //}
+            _context.Entry(entity).State = EntityState.Modified;
 
-        //public void SoftRemoveRange(IEnumerable<int> ids)
-        //{
-        //    throw new NotImplementedException();
-        //}
+            if (entity != null)
+            {
+                entity.isActive = true;
+
+                _unitOfWork.Commit();
+            }
+        }
+
+        public void SoftRemoveRange(IEnumerable<T> entities)
+        {
+            _context.Entry(entities).State = EntityState.Modified;
+            if (entities != null)
+            {
+                foreach (var entity in entities)
+                {
+                    entity.isActive = true;
+                }
+
+                _unitOfWork.Commit();
+            }
+        }
 
         public void Update(T entity)
         {
