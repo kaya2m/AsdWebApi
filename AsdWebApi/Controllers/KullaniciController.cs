@@ -1,11 +1,13 @@
 ﻿using Application.DTOs.Common;
 using Application.Services;
 using Domain.Entities.Global.Kullanici;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Tools;
 
 namespace AsdWebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class KullaniciController : Controller

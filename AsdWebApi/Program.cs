@@ -18,7 +18,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 //SPECIAL CONFIGURES
 builder.Services.ConfigureDatabase(builder.Configuration);
 builder.Services.ConfigureSwaggerSetting();
-//builder.Services.ConfigureAuthentication();
+builder.Services.ConfigureAuthentication(builder.Configuration);
 builder.Host.ConfigureDependency();
 
 

@@ -53,11 +53,8 @@ namespace Repository.Service
         {
             var userList = new List<Claim>
             {   
-                //todo Cailmsler düzenlenecek
                 new Claim(ClaimTypes.NameIdentifier, kullanici.Id.ToString()),
                 new Claim(ClaimTypes.Name, kullanici.KullaniciAdi),
-                new Claim(ClaimTypes.Email, kullanici.Mail),
-                new Claim(ClaimTypes.Role, kullanici.Gorev),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

@@ -44,8 +44,19 @@ namespace AsdWebApi.Controllers
                 return Json(ResponseDto<EmptyDto>.Fail("Kullanıcı adı veya şifre hatalı ya da kullanıcı pasif durumda."));
             }
 
+            var userData = new
+            {
+                Adi = user.Ad,
+                Soyadi = user.Soyad,
+                AdSoyad = user.Ad + " " + user.Soyad,
+                KullaniciAdi = user.KullaniciAdi,
+                TelNo = user.Tel,
+                Mail = user.Mail,
+                Gorev = user.Gorev,
+            };
+
             var token = _tokenService.CreateToken(user);
-            return Json(token);
+            return Json(ResponseDto<EmptyDto>.Success(new {token, userData },"Kullanıcı girişi başarılı",200));
         }
 
         [HttpPost("logout")]

@@ -1,9 +1,14 @@
 ﻿using System.Reflection;
+using System.Text;
 using Autofac;
+using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
+using Domain.Token;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
@@ -32,23 +37,27 @@ public static class ExtensionService
         host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
     }
 
-    public static void ConfigureAuthentication(this IServiceCollection services)
+    public static void ConfigureAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-             .AddCookie(option =>
-             {
-                 option.Cookie.SameSite = SameSiteMode.Lax;
-                 option.Cookie.Name = ".ASD.Auth";
-                 option.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-                 option.Cookie.HttpOnly = false;
-                 option.ExpireTimeSpan = TimeSpan.FromDays(1);
-                 option.Cookie.MaxAge = option.ExpireTimeSpan;
-                 option.SlidingExpiration = false;
-                 option.LoginPath = "/Hesap/Giris";
-                 option.LogoutPath = "/Hesap/Cikis";
-                 option.AccessDeniedPath = "/Hata/404";
-                 option.ReturnUrlParameter = "ReturnUrl";
-             });
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+            .AddJwtBearer(jwt =>
+            {
+                var tokenOptions = configuration.GetSection("TokenOptions").Get<CustomTokenOption>();
+                jwt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = tokenOptions.Issuer,
+                    ValidAudience = tokenOptions.Audience.First(),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenOptions.SecurityKey))
+                };
+            });
     }
     public static void ConfigureSwaggerSetting(this IServiceCollection services)
     {
