@@ -8,8 +8,8 @@ namespace Domain.Entities.Global.Yetki
 {
     public class OnYuz_Yetkiler : BaseEntity
     {
-        public int Kullanici_GrupId { get; set; }
-        public int Modul_Id { get; set; }
-        public int View_Id { get; set; }
+        public int DepartmanId { get; set; }
+        public int ModulId { get; set; }
+        public int EkranId { get; set; }
     }
 }

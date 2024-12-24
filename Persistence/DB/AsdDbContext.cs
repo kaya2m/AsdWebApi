@@ -24,8 +24,7 @@ namespace Persistence.DB
 
         #region TABLE
         public DbSet<Kullanicilar> Kullanicilar { get; set; }
-        public DbSet<Gruplar> Gruplar { get; set; }
-        public DbSet<Birimler> Birimler { get; set; }
+        public DbSet<Departmanlar> Departmanlar { get; set; }
         public DbSet<Gorevler> Gorevler { get; set; }
         public DbSet<Moduller> Moduller { get; set; }
         public DbSet<Menuler> Menuler { get; set; }
@@ -46,7 +45,7 @@ namespace Persistence.DB
 
             #region ENTITY CONFIG
             //modelBuilder.Entity<fonksiyonun veya prosedürün adı>().HasNoKey();
-            
+
 
 
             #endregion ENTITY CONFIG
@@ -55,7 +54,20 @@ namespace Persistence.DB
             //modelBuilder.Entity<tbl>().ToTable(tb => tb.HasTrigger("dbdeki trriger adı"));
             #endregion TRIGGERS
 
-            base.OnModelCreating(modelBuilder);
+            #region RELATIONSHIP
+            modelBuilder.Entity<Kullanicilar>()
+                 .HasOne(k => k.Departmanlar)
+                 .WithMany(d => d.Kullanicilar)
+                 .HasForeignKey(k => k.DepartmanId)
+                 .OnDelete(DeleteBehavior.Restrict); 
+
+            // Kullanicilar -> Gorevler ilişkisi
+            modelBuilder.Entity<Kullanicilar>()
+                .HasOne(k => k.Gorevler)
+                .WithMany(g => g.Kullanicilar)
+                .HasForeignKey(k => k.GorevId)
+                .OnDelete(DeleteBehavior.Restrict);
+            #endregion
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -68,11 +80,12 @@ namespace Persistence.DB
                 {
                     data.Entity.CreateDate = DateTime.Now;
                     data.Entity.isActive = true;
-                    data.Entity.User = "admin";
+                    data.Entity.CreatedUser = "admin";
                 }
                 if (data.State == EntityState.Modified)
                 {
                     data.Entity.UpdateDate = DateTime.Now;
+                    data.Entity.UpdatedUser = "admin";
                 }
             }
             return await base.SaveChangesAsync(cancellationToken);

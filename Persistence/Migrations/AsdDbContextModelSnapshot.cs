@@ -22,7 +22,7 @@ namespace Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Birimler", b =>
+            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Departmanlar", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -31,18 +31,27 @@ namespace Persistence.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Acıklama")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("Adi")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Kod")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("User")
+                    b.Property<string>("UpdatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
@@ -50,7 +59,7 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Birimler");
+                    b.ToTable("ANA_Departmanlar");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Kullanici.Gorevler", b =>
@@ -62,49 +71,26 @@ namespace Persistence.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Acıklama")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("Adi")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("User")
+                    b.Property<string>("CreatedUser")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("isActive")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Gorevler");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Gruplar", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("DepartmanId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Acıklama")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Adi")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("User")
+                    b.Property<string>("UpdatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
@@ -112,7 +98,9 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Gruplar");
+                    b.HasIndex("DepartmanId");
+
+                    b.ToTable("ANA_Gorevler");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Kullanici.Kullanicilar", b =>
@@ -124,31 +112,32 @@ namespace Persistence.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Ad")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Birim_Id")
-                        .HasColumnType("int");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Gorev")
+                    b.Property<string>("CreatedUser")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Gorev_Id")
+                    b.Property<int>("DepartmanId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Grup_Id")
-                        .HasColumnType("int");
+                    b.Property<string>("Gorev")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("GruplarId")
+                    b.Property<int>("GorevId")
                         .HasColumnType("int");
 
                     b.Property<string>("KullaniciAdi")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Mail")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<byte[]>("ProfilResmi")
                         .HasColumnType("varbinary(max)");
@@ -156,22 +145,22 @@ namespace Persistence.Migrations
                     b.Property<string>("Sifre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SifreHash")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Soyad")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("TC")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Tel")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("User")
+                    b.Property<string>("UpdatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
@@ -179,13 +168,11 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Birim_Id");
+                    b.HasIndex("DepartmanId");
 
-                    b.HasIndex("Gorev_Id");
+                    b.HasIndex("GorevId");
 
-                    b.HasIndex("GruplarId");
-
-                    b.ToTable("Kullanicilar");
+                    b.ToTable("ANA_Kullanicilar");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Modul.Menuler", b =>
@@ -196,7 +183,7 @@ namespace Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Child_Id")
+                    b.Property<int>("ChildId")
                         .HasColumnType("int");
 
                     b.Property<string>("ControllerAdi")
@@ -205,10 +192,13 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Detail_Id")
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DetailId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Master_Id")
+                    b.Property<int>("MasterId")
                         .HasColumnType("int");
 
                     b.Property<string>("MenuAdi")
@@ -217,7 +207,7 @@ namespace Persistence.Migrations
                     b.Property<string>("MenuIkon")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Modul_Id")
+                    b.Property<int>("ModulId")
                         .HasColumnType("int");
 
                     b.Property<int>("SiraNo")
@@ -226,7 +216,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("User")
+                    b.Property<string>("UpdatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ViewAdi")
@@ -237,9 +227,9 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Modul_Id");
+                    b.HasIndex("ModulId");
 
-                    b.ToTable("Menuler");
+                    b.ToTable("ANA_Menuler");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Modul.Moduller", b =>
@@ -256,6 +246,9 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatedUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ModulAd")
                         .HasColumnType("nvarchar(max)");
 
@@ -271,7 +264,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("User")
+                    b.Property<string>("UpdatedUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
@@ -279,56 +272,58 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Moduller");
+                    b.ToTable("ANA_Moduller");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Gorevler", b =>
+                {
+                    b.HasOne("Domain.Entities.Global.Kullanici.Departmanlar", "Departmanlar")
+                        .WithMany("Gorevler")
+                        .HasForeignKey("DepartmanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Departmanlar");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Kullanici.Kullanicilar", b =>
                 {
-                    b.HasOne("Domain.Entities.Global.Kullanici.Birimler", "Birimler")
+                    b.HasOne("Domain.Entities.Global.Kullanici.Departmanlar", "Departmanlar")
                         .WithMany("Kullanicilar")
-                        .HasForeignKey("Birim_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("DepartmanId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.Global.Kullanici.Gorevler", "Gorevler")
                         .WithMany("Kullanicilar")
-                        .HasForeignKey("Gorev_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("GorevId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Global.Kullanici.Gruplar", "Gruplar")
-                        .WithMany("Kullanicilar")
-                        .HasForeignKey("GruplarId");
-
-                    b.Navigation("Birimler");
+                    b.Navigation("Departmanlar");
 
                     b.Navigation("Gorevler");
-
-                    b.Navigation("Gruplar");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Modul.Menuler", b =>
                 {
                     b.HasOne("Domain.Entities.Global.Modul.Moduller", "Moduller")
                         .WithMany("Menuler")
-                        .HasForeignKey("Modul_Id")
+                        .HasForeignKey("ModulId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Moduller");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Birimler", b =>
+            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Departmanlar", b =>
                 {
+                    b.Navigation("Gorevler");
+
                     b.Navigation("Kullanicilar");
                 });
 
             modelBuilder.Entity("Domain.Entities.Global.Kullanici.Gorevler", b =>
-                {
-                    b.Navigation("Kullanicilar");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Global.Kullanici.Gruplar", b =>
                 {
                     b.Navigation("Kullanicilar");
                 });

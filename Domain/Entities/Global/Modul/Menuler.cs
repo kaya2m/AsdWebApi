@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Global.Modul
 {
+    [Table("ANA_Menuler")]
     public class Menuler : BaseEntity
     {
         public string MenuAdi { get; set; }
@@ -17,10 +18,10 @@ namespace Domain.Entities.Global.Modul
         public string ControllerAdi { get; set; }
         public string ViewAdi { get; set; }
         [ForeignKey("Moduller")]
-        public int Modul_Id { get; set; }
-        public int Master_Id { get; set; }
-        public int Detail_Id { get; set; }
-        public int Child_Id { get; set; }
+        public int ModulId { get; set; }
+        public int MasterId { get; set; }
+        public int DetailId { get; set; }
+        public int ChildId { get; set; }
         public int SiraNo { get; set; }
 
         [JsonIgnore]
